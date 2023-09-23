@@ -34,3 +34,11 @@ Resources:
           Value: demo-ec2
         - Key: createdBy
           Value: DevOps Team
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudFormation template for s3 bucket     
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket    
+    Properties:
+      BucketName: joy-demo
