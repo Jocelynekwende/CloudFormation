@@ -1,10 +1,10 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: A sample template
 Resources:
-  MyEC2Instance:
+  Webserver:
     Type: "AWS::EC2::Instance"
     Properties: 
-      ImageId: "ami-0022f774911c1d690"
+      ImageId: "ami-0d406e26e5ad4de53"
       InstanceType: t2.micro      
       BlockDeviceMappings:
         -
@@ -13,14 +13,10 @@ Resources:
             VolumeType: gp2            
             DeleteOnTermination: true
             VolumeSize: 8
-
-AWSTemplateFormatVersion: "2010-09-09"
-Description: A sample template
-Resources:
-  MyEC2Instance:
+  Appserver:
     Type: "AWS::EC2::Instance"
     Properties: 
-      ImageId: "ami-0022f774911c1d690"
+      ImageId: "ami-024e6efaf93d85776"
       InstanceType: t2.micro      
       BlockDeviceMappings:
         -
@@ -34,10 +30,6 @@ Resources:
           Value: demo-ec2
         - Key: createdBy
           Value: DevOps Team
-
-AWSTemplateFormatVersion: 2010-09-09
-Description: CloudFormation template for s3 bucket     
-Resources:
   S3Bucket:
     Type: AWS::S3::Bucket    
     Properties:
